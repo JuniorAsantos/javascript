@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Pais: <input type="text" name="txtdf" id="txtdf"/>
+    <input type="button" value="Veificar" onclick="origem()"/>
+    <div id="resp"></div>
+    <script>
+      function origem(){
+          var txtv = window.document.getElementById('txtdf');
+          var res = window.document.getElementById('resp');
+          var pais = txtv.value
+          res.innerHTML = `<p>Vivendo em <strong>${pais}</strong></p>`;
+          if(pais == 'Brasil'){
+              res.innerHTML += `Você é Brasileiro!`;
+          }else{
+              res.innerHTML += `Você é Estrangeiro!`;
+          }
+          
+      }
+    </script>
+</body>
+</html>

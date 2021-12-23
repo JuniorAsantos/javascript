@@ -5,5 +5,5 @@ function parimpar(n){
         return 'Impar'
     }
 }
-var res = parimpar(10)
+var res = parimpar(11)
 console.log(res)
